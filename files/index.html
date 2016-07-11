@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Replicate</title>
+</head>
+<body>
+	<h1>Replicate</h1>
+	<button id="repl">Replicate</button>
+</body>
+<script type="text/javascript">
+	var button = document.getElementById('repl'),
+		xhr = new XMLHttpRequest();
+
+	function replicate () {
+		xhr.open('GET', encodeURI('/run'));
+		xhr.onload = function() {
+			if (xhr.status === 200) {
+				console.log(xhr.responseText);
+			} else {
+				console.error('error');
+			}
+		};
+		xhr.send();
+	}
+
+	if (button.addEventListener){
+		button.addEventListener('click', replicate, false);
+	} else if (button.attachEvent){
+		button.attachEvent('onclick', replicate);
+	}
+</script>
+</html>

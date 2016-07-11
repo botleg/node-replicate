@@ -1,0 +1,15 @@
+{
+	"name": "node-replicate",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/hanzeljesheen/node-replicate.git"
+	},
+	"license": "GPL-3.0",
+	"dependencies": {
+		"koa": "1.2.0"
+	}
+}
