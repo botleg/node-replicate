@@ -5,8 +5,10 @@
 	<title>Replicate</title>
 </head>
 <body>
-	<h1>Replicate</h1>
-	<button id="repl">Replicate</button>
+	<p>
+		<h1>Replicate</h1>
+		<button id="repl">Replicate</button>
+	</p>
 </body>
 <script type="text/javascript">
 	var button = document.getElementById('repl'),
@@ -16,7 +18,7 @@
 		xhr.open('GET', encodeURI('/run'));
 		xhr.onload = function() {
 			if (xhr.status === 200) {
-				console.log(xhr.responseText);
+				document.body.innerHTML += "<br/>"+xhr.responseText;
 			} else {
 				console.error('error');
 			}
