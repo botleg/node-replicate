@@ -10,6 +10,6 @@
 	},
 	"license": "GPL-3.0",
 	"dependencies": {
-		"koa": "1.2.0"
+		"koa": "1.7.1"
 	}
 }
